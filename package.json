@@ -15,11 +15,9 @@
     "dotenv": "^10.0.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",
-    "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "md5": "^2.3.0",
-    "node-fetch": "^2.6.6",
-    "path": "^0.12.7"
+    "node-fetch": "^2.6.6"
   },
   "devDependencies": {
     "morgan": "^1.10.0",

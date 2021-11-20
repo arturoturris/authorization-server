@@ -8,7 +8,6 @@ const port = process.env.PORT || 3300;
 const {
   authenticateUser,
   authorizeUser,
-  verifyToken,
 } = require("./controllers/login.controller");
 
 //CONFIG

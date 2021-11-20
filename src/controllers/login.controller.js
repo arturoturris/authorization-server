@@ -10,12 +10,12 @@ const compareUserPassword = (password, hashedPassword) => {
 exports.authenticateUser = async (req, res, next) => {
   const { user, password } = req.body;
   const hashedPassword = await usuarioController.getUserHashedPassword(user);
-  const successfullyAuthenticated = compareUserPassword(
+  const isSuccessfullyAuthenticated = compareUserPassword(
     password,
     hashedPassword
   );
 
-  if (!successfullyAuthenticated)
+  if (!isSuccessfullyAuthenticated)
     return res
       .status(401)
       .json({ code: 401, message: "User or password doesn't match." });

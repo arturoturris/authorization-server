@@ -21,19 +21,13 @@ The database must have the following structure.
 
 ## Usage
 
-Before using this authentication server you need:
-
-1. Create a public / private key pair for signing and verifying the jtw's.
-
-   - The private key has to be stored one directory above _server.js_.
-   - The public key has to be stored in the resource server and serve as a _public secret_ while doing jwt's verification.
-
-2. Define the following _environment variables_:
+1. Define the following _environment variables_:
 
 - FIREBASE_ENDPOINT -> URL of the real time database (firebase) to work
+- JWT_SECRET -> Secret phrase or text for symmetric encryption
 - JWT_AUDIENCE -> URI of the audience allowed to use the jwt
 - JWT_ISSUER -> Name of the organization that issued the jwt
-- JWT_EXPIRES_IN -> Seconds after the jwt will be invalid
+- JWT_EXPIRES_IN -> String representing the time after the jwt will be invalid ('60s','10m','2h)
 
 **Routes**
 
