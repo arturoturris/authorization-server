@@ -4,6 +4,7 @@ if (process.env.NODE_ENV != "production")
 const express = require("express");
 
 const app = express();
+const cors = require("cors");
 const port = process.env.PORT || 3300;
 const {
   authenticateUser,
@@ -15,11 +16,12 @@ app.set("port", port);
 
 //MIDDLEWARES
 app.use(require("morgan")("dev"));
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //ROUTES
-app.get("/login", authenticateUser, authorizeUser);
+app.post("/login", authenticateUser, authorizeUser);
 
 //SERVER
 app.listen(app.get("port"), () => {
