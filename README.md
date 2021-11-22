@@ -33,4 +33,4 @@ The database must have the following structure.
 
 | Route  | Method | Params             | Response                                                   |
 | ------ | ------ | ------------------ | ---------------------------------------------------------- |
-| /login | GET    | { user, password } | onFail -> { code, message }, onSuccess -> { access_token } |
+| /login | POST    | { user, password } | onFail -> { code, message }, onSuccess -> { access_token } |
